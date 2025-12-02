@@ -1,0 +1,44 @@
+.task-list-wrapper {
+  padding: 16px;
+  background-color: #f9f9f9;
+  width: 400px;
+}
+.search-wrapper {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.search-box {
+  position: relative;
+  width: 100%;
+}
+.search-box input {
+  width: 100%;
+  padding: 10px 10px 10px 32px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.search-box .search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/icons/search-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.search-setting {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.task-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

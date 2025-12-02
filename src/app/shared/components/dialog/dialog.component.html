@@ -1,0 +1,14 @@
+@if(dialog) {
+  <div class="dialog-wrapper">
+    <div class="dialog-box">
+      <div class="dialog-content">
+        <h2>{{dialog.title}}</h2>
+        <p>{{dialog.message}}</p>
+      </div>
+      <div class="dialog-actions">
+        <button (click)="dialog.yesFn()" class="yes">Yes</button>
+        <button (click)="dialog.noFn()" class="no">No</button>
+      </div>
+    </div>
+  </div>
+}

@@ -1,0 +1,29 @@
+<div class="task-list-wrapper">
+  <div class="search-wrapper">
+    <div class="search-box">
+      <input #searchInput name="search" type="text" (keyup)="setQuery(searchInput.value)" placeholder="Search tasks..." />
+      <span class="search-icon"></span>
+    </div>
+    <div class="search-setting">
+      <span>sort by</span>
+      <select #sortSelect name="sort" (change)="sort(sortSelect.value)">
+        <option value="title">title</option>
+        <option value="date">date</option>
+        <option value="status">status</option>
+        <!-- <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option> -->
+      </select>
+    </div>
+  </div>
+
+  <div class="task-item-wrapper">
+    @for(task of taskStore.filteredTasks(); track $index) {
+      <task-item [taskItem]="task"></task-item>
+    }
+
+    @if(taskStore.isLoading()) {
+      <spinner></spinner>
+    }
+
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="task-item">
+  <div class="task-item-content">
+    <h3 class="task-title">{{ taskItem().title }}</h3>
+    <!-- <p class="task-description">This is a brief description of the task.</p> -->
+     <div class="task-footer">
+      <span class="task-status" [class]="taskItem().status">{{ taskItem().status }}</span>
+      <button class="task-details" (click)="openTask()">details</button>
+     </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="task-detail-wrapper">
+  <div class="task-detail-header">
+    <button class="back-btn" (click)="goBack()">Back</button>
+  </div>
+  
+  @if(taskStore.isLoading()) {
+    <spinner></spinner>
+  }
+
+  @if(selectedTask()) {
+    <div class="task-detail-content">
+      <h2 class="task-detail-title">{{ selectedTask()?.title }}</h2>
+      <span class="task-detail-status" [class]="selectedTask()?.status">{{ selectedTask()?.status }}</span>
+      <p class="task-detail-description">
+        {{ selectedTask()?.description }}
+      </p>
+      <p class="date-created">created on {{ selectedTask()?.createdAt | date:'medium' }}</p>
+      <div class="task-detail-footer">
+        <span class="btn-group">
+          <button class="edit-btn" (click)="loadModal()">Edit</button>
+          <button class="delete-btn" (click)="deleteTask()">Delete</button>
+        </span>
+      </div>
+    </div>
+  } 
+  
+  @if(!selectedTask() && !taskStore.isLoading()) {
+    <error></error>
+  }
+
+</div>
+
+@if(modalService.modalPopup$ | async) {
+  <div Modal>
+    <task-edit [task]="selectedTask()!"></task-edit>
+  </div>
+}
+
+<!-- dialog popup -->
+<dialog-popup></dialog-popup>

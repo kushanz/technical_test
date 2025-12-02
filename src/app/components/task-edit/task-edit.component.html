@@ -1,0 +1,32 @@
+<div class="task-edit-wrapper">
+  <h2>Edit Task</h2>
+  <form [formGroup]="editForm" (ngSubmit)="saveTask()">
+    <div class="form-group">
+      <div class="input-group">
+        <label for="title">Title</label>
+        <input formControlName="title" name="title" type="text" />
+      </div>
+
+      <div class="input-group">
+        <label for="description">Description</label>
+        <textarea formControlName="description" name="description"></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="status">Status</label>
+        <select formControlName="status" name="status">
+          <option value="pending">pending</option>
+          <option value="in-progress">in-progress</option>
+          <option value="done">done</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="cancel-btn" (click)="cancel()">Cancel</button>
+        <button type="submit" class="save-btn" (click)="saveTask()" [disabled]="editForm.invalid">Save</button>
+      </div>
+
+    </div>
+  </form>
+
+</div>

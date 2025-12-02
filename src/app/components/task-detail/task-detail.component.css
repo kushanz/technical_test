@@ -1,0 +1,85 @@
+.task-detail-wrapper {
+  padding: 16px;
+  background-color: #f9f9f9;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.task-detail-header {
+  display: flex;
+}
+.task-detail-header .back-btn {
+  background-image: url('/assets/icons/back-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 4px 8px 4px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  border: unset;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.task-detail-content {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.task-detail-content > h2 {
+  margin: unset;
+  font-size: 20px;
+  font-weight: 600;
+}
+.task-detail-content > p {
+  margin: unset;
+  font-size: 16px;
+  color: #666666;
+}
+.task-detail-footer {
+  margin-top: 12px;
+}
+.task-detail-status  {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  width: max-content;
+}
+.task-detail-content > p.date-created {
+  color: #a3a3a3;
+  font-size: 14px;
+}
+.task-detail-status.done {
+  background-color: #c8fdc8;
+}
+.task-detail-status.in-progress {
+  background-color: #ffeac3;
+}
+.task-detail-status.pending {
+  background-color: #e9e8e8;
+}
+.task-detail-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-group {
+  display: flex;
+}
+.btn-group button {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: none;
+  border: 1px solid #ccc;
+  background-color: #ebebeb;
+  cursor: pointer;
+}
+.btn-group button:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.btn-group button:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
