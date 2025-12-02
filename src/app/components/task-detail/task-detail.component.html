@@ -25,7 +25,7 @@
   } 
   
   @if(!selectedTask() && !taskStore.isLoading()) {
-    <error></error>
+    <error [text]="'Task not found.'"></error>
   }
 
 </div>
