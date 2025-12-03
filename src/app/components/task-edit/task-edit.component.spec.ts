@@ -14,6 +14,10 @@ describe('TaskEditComponent', () => {
 
     fixture = TestBed.createComponent(TaskEditComponent);
     component = fixture.componentInstance;
+    
+    // Set required inputs
+    fixture.componentRef.setInput('task', { id: 1, title: 'Test Task', description: 'Test Description', completed: false });
+    
     fixture.detectChanges();
   });
 
