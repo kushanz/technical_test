@@ -32,6 +32,18 @@
   background-repeat: no-repeat;
   pointer-events: none;
 }
+.search-box .clear-text {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/icons/close-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 .search-setting {
   display: flex;
   justify-content: end;

@@ -110,7 +110,7 @@ export const TaskListStore = signalStore(
 
     effect(() => {
       const state = getState(store);
-      console.log('Current Tasks:', state);
+      // console.log('Current Tasks:', state);
     })
   }
 })

@@ -3,6 +3,9 @@
     <div class="search-box">
       <input #searchInput name="search" type="text" (keyup)="setQuery(searchInput.value)" placeholder="Search tasks..." />
       <span class="search-icon"></span>
+      @if(taskStore.searchTerm()) {
+        <span class="clear-text" (click)="clearSearch(searchInput)"></span>
+      }
     </div>
     <div class="search-setting">
       <span>sort by</span>

@@ -19,4 +19,9 @@ export class TaskListComponent {
   sort(by:string) {
     this.taskStore.updateSortTerm(by)
   }
+
+  clearSearch(input: HTMLInputElement) {
+    this.taskStore.updateSearchTerm('')
+    input.value = ''
+  }
 }
