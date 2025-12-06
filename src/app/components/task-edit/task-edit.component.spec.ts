@@ -30,4 +30,22 @@ describe('TaskEditComponent', () => {
     expect(component.task().title).toBe('Test Task');
   })
 
+  it('form should be invalid when empty', () => {
+    component.editForm.setValue({
+      title: '',
+      description: '',
+      status: ''
+    });
+    expect(component.editForm.valid).toBeFalsy();
+  });
+
+  it('form should be valid when filled correctly', () => {
+    component.editForm.setValue({
+      title: 'Updated Task',
+      description: 'This is an updated description for the task.',
+      status: 'in-progress'
+    });
+    expect(component.editForm.valid).toBeTruthy();
+  });
+
 });
