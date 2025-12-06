@@ -61,7 +61,8 @@ export const TaskListStore = signalStore(
     },
     editTask(updatedTask: Task) {
       patchState(store, (state) => ({
-        tasks: state.tasks.map(task => task.id === updatedTask.id ? updatedTask : task)
+        tasks: state.tasks.map(task => task.id === updatedTask.id ? {...task, ...updatedTask} : task)
+        
       }))
     },
     deleteTask(taskId: number) {
@@ -110,7 +111,7 @@ export const TaskListStore = signalStore(
 
     effect(() => {
       const state = getState(store);
-      // console.log('Current Tasks:', state);
+      console.log('Current Tasks:', state);
     })
   }
 })

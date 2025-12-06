@@ -21,6 +21,6 @@ describe('TaskApiService', () => {
     });
     tick(1000);
     expect(result).toBeTruthy();
-    expect(result.length).toBe(3);
+    expect(result.length).toBe(6);
   }));
 });

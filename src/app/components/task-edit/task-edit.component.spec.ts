@@ -24,4 +24,10 @@ describe('TaskEditComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('get input task item', () => {
+    expect(component.task()).toBeDefined();
+    expect(component.task().title).toBe('Test Task');
+  })
+
 });
